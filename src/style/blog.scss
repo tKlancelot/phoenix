@@ -1,0 +1,167 @@
+#blog,#register,#login,#forget{
+    // border:1px solid blue;
+    height: 100vh;
+    max-height: 100vh;
+    padding:32px;
+    font-family: $font-poppins;
+    form{
+        font-size:0.92rem;
+        height:36vh;
+        .input-box{
+            margin:0.25rem 0%;
+            display: flex;
+            input,label{
+              flex-basis: 100%;
+              margin:0.25rem;
+            }  
+            #img{
+              margin: auto 1rem;
+            }
+        }
+    }
+    .linkContainer{
+        // border:1px solid red;
+        display: flex;
+    }
+}
+
+
+#blog,#createItem{  
+    margin:auto;
+}
+
+.blog-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    margin: auto;
+    // overflow-y: scroll!important;
+    height: 76vh;
+
+}
+
+#blog th{
+    color:$dark;
+    font-weight: initial;
+}
+
+#blog table tr td:nth-of-type(4),
+#blog table tr td:nth-of-type(5),
+#blog table tr td:nth-of-type(6),
+#blog table tr td:nth-of-type(7){
+    border:1px solid $secondary;
+    text-align: center;
+}
+
+
+
+#blog{
+    // border:1px solid red;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    .blog-page{
+        // border:1px solid red;
+        background-color: #E2F3F648;
+        height: 100%;
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        .blog-header{
+          flex-basis:100%;
+          height: 8%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h4,p{
+            margin: auto 1rem;
+            font-size: 15px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+          }
+        }
+        .panneau-gauche{
+          // border:1px solid blue;
+          display: flex;
+          flex-direction: column;
+          flex-basis: 23%;
+          justify-content: flex-start;
+          height:84%;
+          margin:0 0.5%;
+          #createItem{
+            width: 100%;
+            margin:0;
+            height: 100%;
+            flex-basis: 100%;
+            background-color: $secondary;
+            // margin-bottom: 0.5rem;
+            display: flex;
+            .form{
+              // border:1px solid red;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              font-size: 0.84rem;
+              padding:0.5rem;
+              // border:1px solid $secondary;
+              font-family: $font-montserrat;
+              .inputBox{
+                display: flex;
+                // flex-direction: column;
+                // border:1px solid red;
+                padding:0.5rem;
+                label,input,textarea{
+                  flex-basis: 20%;
+                  margin:0.1rem auto;
+                  padding:0rem;
+                  font-size: 12px;
+                  letter-spacing: 0.024rem;
+                }
+                label{
+                  text-transform: capitalize;
+                }
+                input,textarea,select{
+                  flex-basis: 80%;
+                }
+                button{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: auto;
+                  width: auto;
+                }
+                #img{
+                  margin:auto 1rem;
+                }
+              }
+            }
+
+
+          }
+        }
+        .panneau-droit{
+          // border:2px solid blue;
+          flex-basis: 75%;
+          margin:0 0.5%;
+          height: 84%;
+          table tbody #textarea{
+            // color:red;
+            width: 100%;
+          }
+        }
+        nav{
+          // border:1px solid orange;
+          width: 100%;
+          flex-basis: 100%;
+          height: 8%;
+        }
+    }
+}
+
+
+

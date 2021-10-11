@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+
+$font-secular : "Secular One", sans-serif;
+$font-poppins : "Poppins", sans-serif;
+$font-montserrat : "Montserrat", sans-serif;
+$write : #131B30c0;
+$primary : #E2F3F6;
+$secondary : #BFD1E1; 
+$medium : #75DFFB; 
+$teal : #1090B1; 
+$dark : #31649F; 
+
+// .Toastify{
+//   z-index: 99999!important;
+  
+// }
+
+.Toastify__toast-container--bottom-right{
+  right:64px!important;
+  bottom:64px!important;
+}
+
+
+.Toastify__toast{
+  background-color: white!important;
+  border: 1px solid $secondary;
+  box-shadow: unset!important;
+  border-radius: 1px!important;
+  div{
+    font-family:$font-montserrat!important;
+    font-size:13px;
+    letter-spacing: 0rem;
+  }
+}
+
+
+@import 'home.scss';
+@import 'resume.scss';
+@import 'tabs.scss';
+@import 'blog.scss';
+@import 'contact.scss';
+@import 'projects.scss';
+@import 'media-780.scss';
+@import 'media-1200.scss';
+
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  #root{
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+}
+
+::selection {
+  background-color: $primary;
+}
+
+
+#home,#contact,#projets,#oneProject{
+  height: 100%;
+  display: flex;
+  padding : 32px;
+}
+
+
+
+.downloadpanel{
+  border-top-right-radius: 1px;
+  position: absolute;
+  top:0px;
+  right:64px;
+  width: 40%;
+  height: 64px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9999;
+  // flex-wrap: wrap;
+  ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-inline-start: 0;
+    font-family: $font-montserrat;
+    font-size: 11px;
+    text-transform: uppercase;
+    // flex-wrap: wrap;
+    // width: 480px;
+    li{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      // align-items: center;
+      // border:1px solid $dark;
+      flex-wrap: wrap;
+      height: 72px;
+      flex-basis: 25%;
+      a{
+        flex-basis: 50%;
+        // border:1px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        border-radius: 50%;
+        background-color: $teal;
+        width: 36px;
+        height: 36px;
+        border:1px solid white;
+        transition: 0.36s;
+        background-position: center;
+        background-repeat: no-repeat;
+        &:hover{
+          background-color: $dark;
+          svg path,svg line{
+            stroke:#fff;
+          }
+        }
+      }
+      span{
+        // border:1px solid blue;
+        flex-basis: 25%;
+        color:$write;
+        opacity: 0.92;
+        &:nth-of-type(2)
+        {
+          // color:red; 
+          padding-top:0.25rem;
+          flex-basis: 12.5%;
+        }
+      }
+      .secondary-button{
+        background-color: $secondary;
+        background-image:url('../assets/projects.svg')
+      }
+      .medium-button{
+        background-color: $medium;
+        background-image:url('../assets/contact.svg')
+      }
+      .dark-button{
+        // background-color: #4075b1c4;
+        background-color: $secondary;
+        background-image:url('../assets/temple.svg')
+      }  
+      .orange-button{
+        background-color: $teal;
+        background-image:url('../assets/white-download-arrow.svg');
+        background-size:44%;
+      }  
+      .contact-button{
+        background-color: $dark;
+        background-image:url('../assets/contact-icon.svg');
+        background-size:44%;
+      }  
+    }
+  }
+}
+
+.menu-content{
+  // border:1px solid red;
+  position: fixed;
+  // right:44px;
+  // bottom:0;
+  top:72px;
+  margin-left:-12%;
+  height: 160px;
+  width:180px;
+  background-color: #fff;
+  box-shadow: 0px 1px 1px #31649F48,0px 1px 1px #31649F24;
+  display: flex;
+  flex-direction: column;
+  z-index:1;
+  nav{
+    height: 100%;
+  }
+  ul{
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    min-height: 100%;
+    li{
+      width: 100%;
+      display: flex;
+      flex-basis: initial;
+      flex-direction: column;
+      height: 24px;
+      a{
+        // color:red;
+        background-color: unset;
+        border-radius: unset;
+        min-width: 84%;
+        text-align: initial;
+        display: flex;
+        justify-content: initial;
+        text-indent: 0.5rem;
+        border:unset;
+        margin:0.5rem auto;
+        min-height: 32px;
+        text-decoration:unset;
+        color:$write;
+        text-transform: capitalize;
+        font-size: 12px;
+        transition:0.72s;
+        &:hover{
+          background-color: #31649F24;
+          &::before{
+            opacity: 1;
+          }
+        }
+        &::before{
+          content:'';
+          position: relative;
+          width: 10px;
+          height: 8px;
+          background-image: url('../assets/right-arrow.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          opacity: 0;
+        }
+      }
+      .active{
+        background-color: #31649F24;
+        // background-color: red;
+        &::before{
+          // opacity: 1;
+        }
+      }
+    } 
+  }  
+}
+
+
+.menu-content .head-panel{
+  display: flex;
+  justify-content: center;
+
+}
+
+
+
